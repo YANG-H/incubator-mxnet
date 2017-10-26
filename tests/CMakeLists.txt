@@ -27,6 +27,7 @@ if(GTEST_FOUND)
   file(GLOB_RECURSE UNIT_TEST_SOURCE "cpp/*.cc" "cpp/*.h")
 
   include_directories(cpp/include)
+  include_directories(${GTEST_INCLUDE_DIR})
 
   if (NOT PRIVATE_RUNTIME_DIR)
    set(PRIVATE_RUNTIME_DIR ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})

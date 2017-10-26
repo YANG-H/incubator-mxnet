@@ -22,7 +22,12 @@
  * \brief threaded engine tests
 */
 #include <time.h>
+#ifndef _MSC_VER
 #include <unistd.h>
+#else
+#include <cstdint>
+typedef std::uint32_t u_int32_t;
+#endif
 #include <dmlc/logging.h>
 #include <gtest/gtest.h>
 #include <mxnet/engine.h>

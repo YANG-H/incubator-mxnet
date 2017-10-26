@@ -510,11 +510,15 @@ inline void print(const RunContext& ctx,
 
 inline std::string demangle(const char *name) {
   int status = -4;  // some arbitrary value to eliminate the compiler warning
+#if !defined(_MSC_VER)
   std::unique_ptr<char, void(*)(void*)> res {
     abi::__cxa_demangle(name, nullptr, nullptr, &status),
     &std::free
   };
   return status ? name : res.get();
+#else
+  return std::string(name); // FIXME
+#endif
 }
 
 #define PRINT_NDARRAYS(__ctx$, __var)  test::print(__ctx$, __FUNCTION__, #__var, __var)
