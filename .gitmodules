@@ -3,7 +3,7 @@
 	url = https://github.com/yang-h/mshadow.git
 [submodule "dmlc-core"]
 	path = dmlc-core
-	url = https://github.com/dmlc/dmlc-core.git
+	url = https://github.com/yang-h/dmlc-core.git
 [submodule "ps-lite"]
 	path = ps-lite
 	url = https://github.com/dmlc/ps-lite
