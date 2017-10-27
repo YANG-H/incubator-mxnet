@@ -56,7 +56,7 @@ inline void check_gemm(const Tensor<xpu, 2, DType>& A, const Tensor<xpu, 2, DTyp
     << "Non compatible matrix dimensions between inputs A and B for gemm";
 }
 
-#if MSHADOW_USE_CBLAS == 1
+#if (MSHADOW_USE_CBLAS == 1 || MSHADOW_USE_MKL == 1)
 
 #define LINALG_CPU_GEMM(fname, DType) \
 template<> inline \
