@@ -1,6 +1,6 @@
 [submodule "mshadow"]
 	path = mshadow
-	url = https://github.com/dmlc/mshadow.git
+	url = https://github.com/yang-h/mshadow.git
 [submodule "dmlc-core"]
 	path = dmlc-core
 	url = https://github.com/dmlc/dmlc-core.git
@@ -9,7 +9,7 @@
 	url = https://github.com/dmlc/ps-lite
 [submodule "nnvm"]
 	path = nnvm
-	url = https://github.com/dmlc/nnvm
+	url = https://github.com/yang-h/nnvm
 [submodule "dlpack"]
 	path = dlpack
 	url = https://github.com/dmlc/dlpack
